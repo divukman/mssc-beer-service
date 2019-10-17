@@ -1,6 +1,7 @@
 package com.dimitar.msscbeerservice.web.controller;
 
 import com.dimitar.msscbeerservice.web.model.BeerDto;
+import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -34,7 +36,12 @@ class BeerControllerTest {
 
     @Test
     void saveNewBeer() throws Exception {
-        final BeerDto beerDto = BeerDto.builder().build();
+        final BeerDto beerDto = BeerDto.builder()
+                .price(BigDecimal.valueOf(10))
+                .beerName("Karlovacko")
+                .beerStyle(BeerStyleEnum.ALE)
+                .upc(10L)
+                .build();
         final String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
         mockMvc.perform(
@@ -47,7 +54,12 @@ class BeerControllerTest {
 
     @Test
     void updateBeerById() throws Exception {
-        final BeerDto beerDto = BeerDto.builder().build();
+        final BeerDto beerDto = BeerDto.builder()
+                .price(BigDecimal.valueOf(10))
+                .beerName("Karlovacko")
+                .beerStyle(BeerStyleEnum.ALE)
+                .upc(10L)
+                .build();
         final String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
         mockMvc.perform(
