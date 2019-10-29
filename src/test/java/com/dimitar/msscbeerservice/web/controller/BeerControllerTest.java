@@ -4,18 +4,27 @@ import com.dimitar.msscbeerservice.web.model.BeerDto;
 import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
+import org.springframework.restdocs.RestDocumentationExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+//import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.*;
+import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
+import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@ExtendWith(RestDocumentationExtension.class)
+@AutoConfigureRestDocs
 @WebMvcTest(BeerController.class)
 class BeerControllerTest {
 
@@ -28,10 +37,13 @@ class BeerControllerTest {
     @Test
     void getBeerById() throws Exception {
         mockMvc.perform(
-                            get("/api/v1/beer/" + UUID.randomUUID().toString())
+                            get("/api/v1/beer/{beerId}", UUID.randomUUID().toString())
                             .accept(MediaType.APPLICATION_JSON)
                 )
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+        .andDo(document("v1/beer", pathParameters(
+                parameterWithName("beerId").description("UUID of desired beer to get.")
+        )));
     }
 
     @Test
