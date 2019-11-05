@@ -84,7 +84,7 @@ class BeerControllerTest {
                         .content(beerDtoJson)
         )
                 .andExpect(status().isCreated())
-                .andDo(document("/v1/beer-new",
+                .andDo(document("v1/beer-new",
                         requestFields(
                                 fields.withPath("id").ignored(),
                                 fields.withPath("version").ignored(),
