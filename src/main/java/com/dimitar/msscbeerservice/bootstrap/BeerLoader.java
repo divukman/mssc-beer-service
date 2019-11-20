@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
-@Component
+//@Component -> not used, using data.sql to bootstrap the data!
 public class BeerLoader implements CommandLineRunner {
 
     public static final String BEER_1_UPC = "0631234200036";
