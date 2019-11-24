@@ -45,15 +45,18 @@ public class BeerServiceImpl implements BeerService {
         }
 
         if (showInventoryOnHand){
-            beerPagedList = new BeerPagedList(beerPage
+            beerPagedList = new BeerPagedList(
+                    beerPage
                     .getContent()
                     .stream()
                     .map(beerMapper::beerToBeerDtoWithInventory)
                     .collect(Collectors.toList()),
+
                     PageRequest
                             .of(beerPage.getPageable().getPageNumber(),
                                     beerPage.getPageable().getPageSize()),
-                    beerPage.getTotalElements());
+                    beerPage.getTotalElements()
+            );
         } else {
             beerPagedList = new BeerPagedList(beerPage
                     .getContent()
