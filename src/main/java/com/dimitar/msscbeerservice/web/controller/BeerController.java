@@ -15,7 +15,7 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/v1/beer")
+@RequestMapping("/api/v1/")
 public class BeerController {
 
     private static final Integer DEFAULT_PAGE_NUMBER = 0;
@@ -41,7 +41,7 @@ public class BeerController {
         return new ResponseEntity<>(beerList, HttpStatus.OK);
     }
 
-    @GetMapping("/{beerId}")
+    @GetMapping("beer/{beerId}")
     public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId") UUID beerId) {
         return new ResponseEntity<BeerDto>(beerService.getById(beerId), HttpStatus.OK);
     }
