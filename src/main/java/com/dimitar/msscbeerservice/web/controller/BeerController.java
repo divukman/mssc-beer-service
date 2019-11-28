@@ -4,7 +4,6 @@ import com.dimitar.msscbeerservice.services.BeerService;
 import com.dimitar.msscbeerservice.web.model.BeerDto;
 import com.dimitar.msscbeerservice.web.model.BeerPagedList;
 import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
