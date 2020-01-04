@@ -2,7 +2,7 @@ package com.dimitar.msscbeerservice.services;
 
 import com.dimitar.msscbeerservice.domain.Beer;
 import com.dimitar.msscbeerservice.repositories.BeerRepository;
-import com.dimitar.msscbeerservice.web.controller.NotFoundException;
+import com.dimitar.msscbeerservice.web.exception.NotFoundException;
 import com.dimitar.msscbeerservice.web.mappers.BeerMapper;
 import com.dimitar.msscbeerservice.web.model.BeerDto;
 import com.dimitar.msscbeerservice.web.model.BeerPagedList;
@@ -27,7 +27,6 @@ public class BeerServiceImpl implements BeerService {
     @Cacheable(cacheNames = "beerListCache", condition = "#showInventoryOnHand == false ")
     @Override
     public BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest pageRequest, Boolean showInventoryOnHand) {
-
         BeerPagedList beerPagedList;
         Page<Beer> beerPage;
 

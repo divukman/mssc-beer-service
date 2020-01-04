@@ -23,6 +23,7 @@ public class BeerController {
 
     private final BeerService beerService;
 
+
     @GetMapping(produces = { "application/json" }, path = "beer")
     public ResponseEntity<BeerPagedList> listBeers(@RequestParam(value="pageNumber", required = false) Integer pageNumber,
                                                    @RequestParam(value="pageSize", required = false) Integer pageSize,
@@ -32,11 +33,9 @@ public class BeerController {
         if (pageNumber == null || pageNumber < 0) {
             pageNumber = DEFAULT_PAGE_NUMBER;
         }
-
         if (pageSize == null || pageSize < 0) {
             pageSize = DEFAULT_PAGE_SIZE;
         }
-
         BeerPagedList beerList = beerService.listBeers(beerName, beerStyle, PageRequest.of(pageNumber, pageSize), showInventoryOnHand);
         return new ResponseEntity<>(beerList, HttpStatus.OK);
     }

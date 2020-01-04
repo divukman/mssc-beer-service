@@ -1,4 +1,4 @@
-package com.dimitar.msscbeerservice.web.controller;
+package com.dimitar.msscbeerservice.web.exception;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.dimitar.msscbeerservice.web.controller;
+package com.dimitar.msscbeerservice.web.exception;
 
 public class NotFoundException extends RuntimeException{
 }
