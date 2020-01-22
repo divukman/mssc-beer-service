@@ -6,7 +6,6 @@ import com.dimitar.msscbeerservice.events.BrewBeerEvent;
 import com.dimitar.msscbeerservice.repositories.BeerRepository;
 import com.dimitar.msscbeerservice.services.inventory.BeerInventoryService;
 import com.dimitar.msscbeerservice.web.mappers.BeerMapper;
-import com.dimitar.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsTemplate;
