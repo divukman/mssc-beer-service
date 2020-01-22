@@ -4,7 +4,7 @@ import com.dimitar.msscbeerservice.domain.Beer;
 import com.dimitar.msscbeerservice.repositories.BeerRepository;
 import com.dimitar.msscbeerservice.web.exception.NotFoundException;
 import com.dimitar.msscbeerservice.web.mappers.BeerMapper;
-import com.dimitar.msscbeerservice.web.model.BeerDto;
+import guru.sfg.common.BeerDto;
 import com.dimitar.msscbeerservice.web.model.BeerPagedList;
 import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;

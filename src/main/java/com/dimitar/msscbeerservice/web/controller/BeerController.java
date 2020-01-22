@@ -1,7 +1,7 @@
 package com.dimitar.msscbeerservice.web.controller;
 
 import com.dimitar.msscbeerservice.services.BeerService;
-import com.dimitar.msscbeerservice.web.model.BeerDto;
+import guru.sfg.common.BeerDto;
 import com.dimitar.msscbeerservice.web.model.BeerPagedList;
 import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;

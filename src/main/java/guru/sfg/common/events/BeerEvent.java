@@ -1,6 +1,6 @@
-package com.dimitar.msscbeerservice.events;
+package guru.sfg.common.events;
 
-import com.dimitar.msscbeerservice.web.model.BeerDto;
+import guru.sfg.common.BeerDto;
 import lombok.*;
 
 import java.io.Serializable;
