@@ -20,7 +20,7 @@ public class JmsConfig {
         converter.setTargetType(MessageType.TEXT);
         converter.setTypeIdPropertyName("_type");
 
-        converter.setObjectMapper(objectMapper);
+       converter.setObjectMapper(objectMapper);
         return converter;
     }
 

@@ -4,7 +4,6 @@ import com.dimitar.msscbeerservice.domain.Beer;
 import com.dimitar.msscbeerservice.web.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
-import org.springframework.stereotype.Component;
 
 @Mapper(uses = { DateMapper.class })
 @DecoratedWith(BeerMapperDecorator.class)
