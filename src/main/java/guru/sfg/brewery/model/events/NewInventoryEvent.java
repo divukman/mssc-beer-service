@@ -4,9 +4,9 @@ import guru.sfg.brewery.model.BeerDto;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class InventoryEvent extends BeerEvent {
+public class NewInventoryEvent extends BeerEvent {
 
-    public InventoryEvent(BeerDto beerDto) {
+    public NewInventoryEvent(BeerDto beerDto) {
         super(beerDto);
     }
 }

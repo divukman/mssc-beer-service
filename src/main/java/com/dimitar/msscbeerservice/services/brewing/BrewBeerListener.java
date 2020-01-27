@@ -3,7 +3,7 @@ package com.dimitar.msscbeerservice.services.brewing;
 import com.dimitar.msscbeerservice.config.JmsConfig;
 import com.dimitar.msscbeerservice.domain.Beer;
 import guru.sfg.brewery.model.events.BrewBeerEvent;
-import guru.sfg.brewery.model.events.InventoryEvent;
+import guru.sfg.brewery.model.events.NewInventoryEvent;
 import com.dimitar.msscbeerservice.repositories.BeerRepository;
 import guru.sfg.brewery.model.BeerDto;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,7 @@ public class BrewBeerListener {
         final Beer beer = beerRepository.getOne(beerDto.getId());
         beerDto.setQuantityOnHand(beer.getQuantityToBrew()); //hack with imaginary brewing process
 
-        final InventoryEvent inventoryEvent = new InventoryEvent(beerDto);
+        final NewInventoryEvent inventoryEvent = new NewInventoryEvent(beerDto);
         jmsTemplate.convertAndSend(JmsConfig.NEW_INVENTORY_QUEUE, inventoryEvent);
     }
 }
