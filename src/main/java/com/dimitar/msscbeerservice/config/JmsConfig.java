@@ -10,8 +10,13 @@ import org.springframework.jms.support.converter.MessageType;
 @Configuration
 public class JmsConfig {
 
+
+    //request / response queues -> brew then send new inventory event
     public static final String BREWING_REQUEST_QUEUE = "brewing-request";
     public static final String NEW_INVENTORY_QUEUE = "new-inventory";
+
+
+    // request / response queues -> get validation event, send validate result event
     public static final String VALIDATE_ORDER_QUEUE = "validate-order";
     public static final String VALIDATE_ORDER_RESPONSE_QUEUE = "validate-order-response";
 
