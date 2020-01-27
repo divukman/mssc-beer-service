@@ -1,9 +1,9 @@
 package com.dimitar.msscbeerservice.web.controller;
 
 import com.dimitar.msscbeerservice.services.BeerService;
-import guru.sfg.common.BeerDto;
-import com.dimitar.msscbeerservice.web.model.BeerPagedList;
-import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerDto;
+import guru.sfg.brewery.model.BeerPagedList;
+import guru.sfg.brewery.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;

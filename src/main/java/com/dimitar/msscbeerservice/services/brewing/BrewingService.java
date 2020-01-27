@@ -2,7 +2,7 @@ package com.dimitar.msscbeerservice.services.brewing;
 
 import com.dimitar.msscbeerservice.config.JmsConfig;
 import com.dimitar.msscbeerservice.domain.Beer;
-import guru.sfg.common.events.BrewBeerEvent;
+import guru.sfg.brewery.model.events.BrewBeerEvent;
 import com.dimitar.msscbeerservice.repositories.BeerRepository;
 import com.dimitar.msscbeerservice.services.inventory.BeerInventoryService;
 import com.dimitar.msscbeerservice.web.mappers.BeerMapper;

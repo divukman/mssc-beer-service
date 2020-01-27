@@ -2,10 +2,10 @@ package com.dimitar.msscbeerservice.services.brewing;
 
 import com.dimitar.msscbeerservice.config.JmsConfig;
 import com.dimitar.msscbeerservice.domain.Beer;
-import guru.sfg.common.events.BrewBeerEvent;
-import guru.sfg.common.events.InventoryEvent;
+import guru.sfg.brewery.model.events.BrewBeerEvent;
+import guru.sfg.brewery.model.events.InventoryEvent;
 import com.dimitar.msscbeerservice.repositories.BeerRepository;
-import guru.sfg.common.BeerDto;
+import guru.sfg.brewery.model.BeerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

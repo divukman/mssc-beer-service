@@ -1,8 +1,8 @@
 package com.dimitar.msscbeerservice.services;
 
-import guru.sfg.common.BeerDto;
-import com.dimitar.msscbeerservice.web.model.BeerPagedList;
-import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerDto;
+import guru.sfg.brewery.model.BeerPagedList;
+import guru.sfg.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.UUID;

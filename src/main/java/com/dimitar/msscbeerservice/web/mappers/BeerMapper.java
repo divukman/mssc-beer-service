@@ -1,7 +1,7 @@
 package com.dimitar.msscbeerservice.web.mappers;
 
 import com.dimitar.msscbeerservice.domain.Beer;
-import guru.sfg.common.BeerDto;
+import guru.sfg.brewery.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

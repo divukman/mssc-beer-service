@@ -1,4 +1,4 @@
-package com.dimitar.msscbeerservice.web.model;
+package guru.sfg.brewery.model;
 
 public enum BeerStyleEnum {
     LAGER,

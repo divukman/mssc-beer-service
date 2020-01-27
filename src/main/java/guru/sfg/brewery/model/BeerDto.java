@@ -1,6 +1,6 @@
-package guru.sfg.common;
+package guru.sfg.brewery.model;
 
-import com.dimitar.msscbeerservice.web.model.BeerStyleEnum;
+import guru.sfg.brewery.model.BeerStyleEnum;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
